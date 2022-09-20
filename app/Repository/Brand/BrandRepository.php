@@ -3,12 +3,17 @@
 namespace App\Repository\Brand;
 
 use App\Models\Brand;
+use Illuminate\Support\Facades\Cache;
+use Illuminate\Support\Facades\Redis;
 
 class BrandRepository implements BrandInterface
 {
     public function getAllData()
     {
-        return Brand::latest()->get();
+        return Cache::remember("brands", 60, function(){
+            return Brand::latest()->get();
+        });
+        
     }
 
     public function storeOrUpdate($data)
