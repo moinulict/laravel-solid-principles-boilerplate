@@ -66,5 +66,5 @@ jobs:
         username: ${{ secrets.SSH_USERNAME }}
         script: |
           cd /var/www/admin.dummyproject.xyz/
-          git checkout -f 
+          git checkout -f master
           composer install
