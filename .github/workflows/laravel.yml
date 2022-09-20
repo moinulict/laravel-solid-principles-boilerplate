@@ -66,5 +66,5 @@ jobs:
         username: ${{ secrets.SSH_USERNAME }}
         script: |
           cd /var/www/admin.dummyproject.xyz/
-          ggit pull origin master
+          git pull origin master
           composer install
