@@ -68,5 +68,5 @@ jobs:
           cd /var/www/admin.dummyproject.xyz/
           git remote update
           git fetch
-          git checkout --track origin/master
+          git checkout master
           composer install
