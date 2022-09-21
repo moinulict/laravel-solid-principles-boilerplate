@@ -66,7 +66,5 @@ jobs:
         username: ${{ secrets.SSH_USERNAME }}
         script: |
           cd /var/www/admin.dummyproject.xyz/
-          git remote update
-          git fetch
-          git checkout master
+          git pull origin master
           composer install
