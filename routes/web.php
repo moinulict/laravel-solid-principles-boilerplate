@@ -16,4 +16,5 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function(){
     return view('welcome');
 });
+Route::get('convert', 'Admin\BrandController@convert');
 Route::resource('brands', 'Admin\BrandController');
